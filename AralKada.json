@@ -715,7 +715,7 @@
       "effects": [],
       "behaviors": [],
       "content": {
-        "initialValue": "",
+        "initialValue": "JUAN DE LA CRUZ",
         "placeholder": "JUAN DE LA CRUZ",
         "fontResourceName": "",
         "fontSize": 60,
@@ -725,7 +725,7 @@
         "fillOpacity": 0,
         "borderColor": "74;144;226",
         "borderOpacity": 255,
-        "borderWidth": 0,
+        "borderWidth": 1,
         "readOnly": false,
         "disabled": false
       }
@@ -2684,7 +2684,16 @@
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -2827,7 +2836,18 @@
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "UserText",
+          "type": "string",
+          "value": "1"
+        },
+        {
+          "name": "NameInput",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -2999,12 +3019,12 @@
           "depth": 0,
           "height": 85,
           "layer": "",
-          "name": "NameInput",
-          "persistentUuid": "a25815f4-96fe-44f3-9331-be9fabb32457",
+          "name": "ProgYearInput",
+          "persistentUuid": "941acbf1-8d07-4240-9dde-4c5b81ef6232",
           "width": 821,
-          "x": 156,
-          "y": 587,
-          "zOrder": 16,
+          "x": 148,
+          "y": 1161,
+          "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3012,15 +3032,16 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 0,
-          "height": 85,
+          "depth": 1,
+          "height": 74,
+          "keepRatio": true,
           "layer": "",
-          "name": "ProgYearInput",
-          "persistentUuid": "941acbf1-8d07-4240-9dde-4c5b81ef6232",
-          "width": 821,
-          "x": 148,
-          "y": 1161,
-          "zOrder": 17,
+          "name": "NameInput",
+          "persistentUuid": "4320c0d7-bea2-4e92-8780-240e34a2f5db",
+          "width": 789,
+          "x": 153,
+          "y": 593,
+          "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3457,20 +3478,17 @@
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+          "conditions": [
             {
               "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                "value": "DepartScene"
               },
               "parameters": [
-                "NameInput",
-                "Text",
-                "=",
-                "CustomizedInput.Text()"
+                ""
               ]
             }
-          ]
+          ],
+          "actions": []
         }
       ],
       "layers": [
